@@ -20,7 +20,7 @@ Inspirado pelo conceito de disjuntores elétricos, que interrompem a corrente el
 
 **Estado Meio-Aberto (Half-Open)**: Após um período definido, o Circuit Breaker muda para o estado meio-aberto, permitindo que algumas chamadas passem. Se essas chamadas forem bem-sucedidas, o Circuit Breaker volta ao estado fechado, caso contrário, permanece no estado aberto, indicando que o sistema ainda não se recuperou totalmente.
 
-![imagem](../imagens/diagramas-circuit%20breaker.png)
+![imagem](../circuit-breaker//imagens/diagramas-circuit%20breaker.png)
 
 
 ## Benefícios do Padrão Circuit Breaker
