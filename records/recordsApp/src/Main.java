@@ -7,7 +7,7 @@ public class Main {
 
         var clientClass  = new ClientClass("Carlos", "carlos@email.com");
         System.out.println(clientClass);
-        
+
         var clientRecord = new ClientRecord("Kelli", "kelli@email.com");
         System.out.println(clientRecord);
         clientRecord.printName();

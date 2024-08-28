@@ -16,7 +16,7 @@ Um Record em Java:
 - Não possui a necessidade de criar getters, construtores e métodos de comparação.
 - Suporta validações de entrada, utilizando as anotações do pacote *Jakarta.Validation**, como `@NotBlank`, `@NotNull`, entre outras.
 
-Casos de Uso
+## Casos de Uso
 
 Os Records são particularmente indicados para representar DTOs ou até mesmo os objetos de valor (Value Objects). 
 
