@@ -33,7 +33,7 @@ public class TokenController {
     @PostMapping("/login")
     public ResponseEntity<LoginResponse>login(@RequestBody LoginRequest loginRequest){
 
-        var client = this.clientRepository.findByName(loginRequest.userName());
+        var client = this.clientRepository.findByName(loginRequest.clientname());
 
         if (client.isEmpty() || !client.get().isLoginCorrect(loginRequest, this.passwordEncoder)){
             throw new BadCredentialsException("client name or password is invalid");
