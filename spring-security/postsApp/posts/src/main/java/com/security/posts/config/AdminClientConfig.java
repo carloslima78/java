@@ -32,7 +32,7 @@ public class AdminClientConfig implements CommandLineRunner {
 
         var roleAdmin = this.roleRepository.findByName(Role.Values.ADMIN.name());
 
-        var clientAdmin = this.clientRepository.findByName("admin");
+        var clientAdmin = this.clientRepository.findByName("carlos");
 
         clientAdmin.ifPresentOrElse(
                 client -> {
@@ -40,7 +40,7 @@ public class AdminClientConfig implements CommandLineRunner {
                 },
                 () -> {
                     var client = new Client();
-                    client.setName("admin");
+                    client.setName("carlos");
                     client.setPassword(passwordEncoder.encode("123"));
                     client.setRoles(Set.of(roleAdmin));
                     this.clientRepository.save(client);
