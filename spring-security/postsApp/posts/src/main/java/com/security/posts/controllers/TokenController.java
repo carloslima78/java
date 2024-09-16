@@ -52,7 +52,7 @@ public class TokenController {
 
         // Get claims
         var claims = JwtClaimsSet.builder()
-                .issuer("PostsApp")
+                .issuer("posts")
                 .subject(client.get().getClientId().toString())
                 .issuedAt(now)
                 .expiresAt(now.plusSeconds(expiresIn))

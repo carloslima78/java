@@ -45,7 +45,7 @@ public class SecurityConfig {
                 .authorizeHttpRequests(authorize -> authorize
                         // Exception to allows POSTs in Login and Users routes.
                         .requestMatchers(HttpMethod.POST, "/login").permitAll()
-                        .requestMatchers(HttpMethod.POST, "/users").permitAll()
+                        .requestMatchers(HttpMethod.POST, "/clients").permitAll()
                         .anyRequest().authenticated())
                 .csrf(csrf -> csrf.disable())
                 .oauth2ResourceServer(oauth2 -> oauth2.jwt(Customizer.withDefaults()))

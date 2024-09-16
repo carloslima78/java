@@ -34,7 +34,7 @@ public class ClientController {
         this.passwordEncoder = passwordEncoder;
     }
 
-    @PostMapping("/users")
+    @PostMapping("/clients")
     @Transactional
     public ResponseEntity<Void> newClient(@RequestBody CreateClient dto){
 
@@ -56,8 +56,8 @@ public class ClientController {
         return ResponseEntity.ok().build();
     }
 
-    @GetMapping("/users")
-    @PreAuthorize("hasAuthority('SCOPE_ADMIN')")
+    @GetMapping("/clients")
+    @PreAuthorize("hasAuthority('SCOPE_admin')")
     public ResponseEntity<List<Client>> listClients(){
 
         var clients = this.clientRepository.findAll();
