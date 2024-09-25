@@ -1,7 +1,8 @@
 package com.security.posts.entities;
 
 import jakarta.persistence.*;
-import com.security.posts.entities.*;
+import org.hibernate.annotations.CreationTimestamp;
+
 import java.time.Instant;
 
 @Entity
@@ -19,6 +20,7 @@ public class Post {
 
     private String content;
 
+    @CreationTimestamp
     private Instant timestamp;
 
     public Long getPostId() {
